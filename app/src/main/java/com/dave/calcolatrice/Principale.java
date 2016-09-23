@@ -287,54 +287,36 @@ public class Principale extends AppCompatActivity {
         });
 
 
-        //Pulsante resettaNumeroEspressione
+        //Pulsante resettaNumero
         pulsanteResettaNumero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (!espressioneCompleta.getText().toString().endsWith("=")) {
 
-                    //Se è presente una radice o meno
-                    if (numeroEspressione.getText().toString().startsWith("√")) {
+                    //Cancello i numeri dalla schermata
+                    numeroEspressione.setText("");
 
-                        //Resetto il testo
-                        numeroEspressione.setText("");
+                    //Resetto le liste
+                    listaNumeriRadice.clear();
+                    listaOperatoriRadice.clear();
+                    listaNumeriEsponente.clear();
+                    listaOperatoriEsponente.clear();
 
-                        //Resetto le liste
-                        listaNumeriRadice.clear();
-                        listaOperatoriRadice.clear();
+                    //Resetto le variabili
+                    daRimuovereRadice = "√(";
+                    tempRadice = "";
+                    daRimuovereEsponente = "^(";
+                    tempEsponente = "";
+                    numeroBase = "";
+                    testoPrimaEsponente = "";
 
-                        //Resetto le variabili
-                        daRimuovereRadice = "√(";
-                        tempRadice = "";
+                    //Resetto la schermata
+                    pulsanteRadice.setVisibility(View.VISIBLE);
+                    pulsanteChiudiRadice.setVisibility(View.INVISIBLE);
 
-                        //Resetto la schermata
-                        pulsanteRadice.setVisibility(View.VISIBLE);
-                        pulsanteChiudiRadice.setVisibility(View.INVISIBLE);
-
-                    } else if (numeroEspressione.getText().toString().contains("^")) {
-
-                        //Resetto il testo
-                        numeroEspressione.setText("");
-
-                        //Resetto le liste
-                        listaNumeriEsponente.clear();
-                        listaOperatoriEsponente.clear();
-
-                        //Resetto le variabili
-                        daRimuovereEsponente = "^(";
-                        tempEsponente = "";
-                        numeroBase = "";
-                        testoPrimaEsponente = "";
-                    } else {
-
-                        //Cancello i numeri dalla schermata
-                        numeroEspressione.setText("");
-
-                        //Resetto le liste
-                        listaOperatori.clear();
-                        listaNumeri.clear();
-                    }
+                    pulsantePotenza.setVisibility(View.VISIBLE);
+                    pulsanteChiudiPotenza.setVisibility(View.INVISIBLE);
                 }
             }
         });
@@ -389,9 +371,6 @@ public class Principale extends AppCompatActivity {
                     //Rendo visibile il pulsante per chiudere la potenza
                     pulsanteChiudiPotenza.setVisibility(View.VISIBLE);
                     pulsantePotenza.setVisibility(View.INVISIBLE);
-
-                    pulsanteChiudiRadice.setEnabled(false);
-                    pulsanteRadice.setEnabled(false);
                 }
             }
         });
@@ -424,7 +403,7 @@ public class Principale extends AppCompatActivity {
                     //Aggiungo il numero
                     listaNumeriEsponente.add(Double.parseDouble(tempEsponente));
 
-                    if (Double.isInfinite(Math.pow(Double.parseDouble(numeroBase), risolviEspressione(listaNumeriEsponente, listaOperatoriEsponente)))){
+                    if (Double.isInfinite(Math.pow(Double.parseDouble(numeroBase), risolviEspressione(listaNumeriEsponente, listaOperatoriEsponente)))) {
                         Toast.makeText(Principale.this, "E' un numero infinito! :(", Toast.LENGTH_LONG).show();
                         numeroEspressione.setText("");
                     } else {
@@ -442,9 +421,6 @@ public class Principale extends AppCompatActivity {
                     //Cambio i pulsanti
                     pulsantePotenza.setVisibility(View.VISIBLE);
                     pulsanteChiudiPotenza.setVisibility(View.INVISIBLE);
-
-                    pulsanteChiudiRadice.setEnabled(true);
-                    pulsanteRadice.setEnabled(true);
                 }
             }
         });
@@ -494,7 +470,7 @@ public class Principale extends AppCompatActivity {
                     //Aggiungo il numero
                     listaNumeriRadice.add(Double.parseDouble(tempRadice));
 
-                    if (Double.isNaN(Math.sqrt(risolviEspressione(listaNumeriRadice, listaOperatoriRadice)))){
+                    if (Double.isNaN(Math.sqrt(risolviEspressione(listaNumeriRadice, listaOperatoriRadice)))) {
 
                         Toast.makeText(Principale.this, "Radice di numero negativo! :D", Toast.LENGTH_LONG).show();
                         numeroEspressione.setText("");
