@@ -24,11 +24,10 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/numeroEspressione"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:editable="false"
             android:enabled="true"
             android:lines="1"
-            android:layout_weight="0.04"
             android:layout_below="@+id/espressioneCompleta"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -67,12 +66,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="4"
+            android:text="@string/numberFour"
             android:id="@+id/pulsanteQuattro"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteUno"
@@ -82,7 +81,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="1"
+            android:text="@string/numberOne"
             android:id="@+id/pulsanteUno"
             android:textSize="30dp"
             android:layout_alignParentTop="true"
@@ -92,7 +91,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="3"
+            android:text="@string/numberThree"
             android:id="@+id/pulsanteTre"
             android:textSize="30sp"
             android:layout_alignParentTop="true"
@@ -103,7 +102,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="2"
+            android:text="@string/numberTwo"
             android:id="@+id/pulsanteDue"
             android:textSize="30sp"
             android:layout_alignParentTop="true"
@@ -113,7 +112,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="5"
+            android:text="@string/numberFive"
             android:id="@+id/pulsanteCinque"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteTre"
@@ -123,7 +122,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="7"
+            android:text="@string/numberSeven"
             android:id="@+id/pulsanteSette"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteQuattro"
@@ -133,7 +132,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="+"
+            android:text="@string/signPlus"
             android:id="@+id/pulsantePiu"
             android:textSize="30dp"
             android:layout_alignParentTop="true"
@@ -145,7 +144,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="-"
+            android:text="@string/signMinus"
             android:id="@+id/pulsanteMeno"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteTre"
@@ -155,7 +154,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="8"
+            android:text="@string/numberEight"
             android:id="@+id/pulsanteOtto"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteCinque"
@@ -165,7 +164,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="9"
+            android:text="@string/numberNine"
             android:id="@+id/pulsanteNove"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteMeno"
@@ -175,7 +174,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="6"
+            android:text="@string/numberSix"
             android:id="@+id/pulsanteSei"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteUno"
@@ -185,7 +184,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="x"
+            android:text="@string/signMultiple"
             android:id="@+id/pulsantePer"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteCinque"
@@ -195,7 +194,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text=":"
+            android:text="@string/signDivide"
             android:id="@+id/pulsanteDiviso"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteOtto"
@@ -205,7 +204,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="="
+            android:text="@string/signEquals"
             android:id="@+id/pulsanteUguale"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteDiviso"
@@ -215,7 +214,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="0"
+            android:text="@string/numberZero"
             android:id="@+id/pulsanteZero"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteSette"
@@ -235,7 +234,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="."
+            android:text="@string/signPeriod"
             android:id="@+id/pulsantePunto"
             android:textSize="30dp"
             android:layout_below="@+id/pulsanteSette"
@@ -245,7 +244,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="√"
+            android:text="@string/squareRoot"
             android:id="@+id/pulsanteRadice"
             android:textSize="30dp"
             android:enabled="true"
@@ -257,7 +256,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="^"
+            android:text="@string/toSquared"
             android:id="@+id/pulsantePotenza"
             android:textSize="30dp"
             android:layout_alignTop="@+id/pulsanteUguale"
@@ -267,7 +266,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text="Esci"
+            android:text="@string/buttonExit"
             android:id="@+id/pulsanteEsci"
             android:textSize="20dp"
             android:layout_alignTop="@+id/pulsanteRadice"
@@ -277,7 +276,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text=")"
+            android:text="@string/closeToSquared"
             android:id="@+id/pulsanteChiudiPotenza"
             android:textSize="30dp"
             android:visibility="invisible"
@@ -289,7 +288,7 @@
         <Button
             android:layout_width="82dp"
             android:layout_height="82dp"
-            android:text=")"
+            android:text="@string/closeSquareRoot"
             android:id="@+id/pulsanteChiudiRadice"
             android:textSize="30dp"
             android:visibility="invisible"
