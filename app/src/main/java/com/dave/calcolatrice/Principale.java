@@ -1,7 +1,10 @@
 package com.dave.calcolatrice;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -195,15 +198,22 @@ public class Principale extends AppCompatActivity {
         pulsanteMeno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!numeroEspressione.getText().toString().endsWith(".") &&
-                        !numeroEspressione.getText().toString().endsWith("(")) {
-                    if (numeroEspressione.getText().toString().startsWith("√")) {
+                if (!numeroEspressione.getText().toString().endsWith(".")) {
+
+                    if (numeroEspressione.getText().toString().isEmpty() ||
+                            numeroEspressione.getText().toString().endsWith("(")) {
+
+                        numeroEspressione.setText(numeroEspressione.getText().toString() + "-");
+
+                    } else if (numeroEspressione.getText().toString().startsWith("√")) {
                         segnoRadice('-');
                     } else if (numeroEspressione.getText().toString().contains("^")) {
                         segnoEsponente('-');
                     } else {
                         segnoEspressione('-');
+
                     }
+
                 }
             }
         });
@@ -326,10 +336,7 @@ public class Principale extends AppCompatActivity {
         pulsanteEsci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //Chiudo l'applicazione
-                finish();
-                System.exit(0);
+                esci();
             }
         });
 
@@ -744,5 +751,43 @@ public class Principale extends AppCompatActivity {
     //Metodo che arrotonda una double
     public double arrotondaDouble(double d, int p) {
         return Math.rint(d * Math.pow(10, p)) / Math.pow(10, p);
+    }
+
+    public void esci() {
+        //Chiudo l'applicazione
+        finish();
+        System.exit(0);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.actionOne) {
+            startActivity(new Intent(getApplicationContext(), Impostazioni.class));
+        }
+        if (id == R.id.actionTwo) {
+
+            //Utilizza l'app predefinita per inviare una mail
+            final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+            emailIntent.setType("plain/text");
+            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"dave.venturini@gmail.com"});
+            emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "App Android Calcolatrice");
+
+            startActivity(Intent.createChooser(emailIntent, "Invia email..."));
+            ;
+        }
+        if (id == R.id.actionThree) {
+            esci();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

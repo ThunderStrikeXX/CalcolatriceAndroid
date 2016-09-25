@@ -23,5 +23,8 @@
     <string name="buttonExit">ESCI</string>
     <string name="buttonCancel">C</string>
     <string name="cancel">Cancella</string>
+    <string name="actionOne">Impostazioni</string>
+    <string name="actionTwo">Inviaci un\'idea!</string>
+    <string name="actionThree">Esci</string>
 
 </resources>
