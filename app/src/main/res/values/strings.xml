@@ -26,5 +26,16 @@
     <string name="actionOne">Impostazioni</string>
     <string name="actionTwo">Inviaci un\'idea!</string>
     <string name="actionThree">Esci</string>
+    <string name="buttonSave">SALVA</string>
+    <string name="buttonReset">RESETTA</string>
+    <string name="buttonCancel_2">ANNULLA</string>
+    <string name="blackTheme">Tema Nero</string>
+    <string name="whiteTheme">Tema Bianco</string>
+    <string name="blueTheme">Tema Blu</string>
+    <string name="themeText">Seleziona un tema:</string>
+    <string name="buttonCos">COS</string>
+    <string name="buttonSin">SIN</string>
+    <string name="buttonCloseCos">)</string>
+    <string name="buttonCloseSin">)</string>
 
 </resources>

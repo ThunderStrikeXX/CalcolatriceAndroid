@@ -40,6 +40,10 @@ public class Principale extends AppCompatActivity {
     Button pulsantePotenza;
     Button pulsanteChiudiRadice;
     Button pulsanteChiudiPotenza;
+    Button pulsanteCoseno;
+    Button pulsanteSeno;
+    Button pulsanteChiudiCoseno;
+    Button pulsanteChiudiSeno;
     ImageButton pulsanteResettaNumero;
     TextView espressioneCompleta;
     EditText numeroEspressione;
@@ -61,6 +65,22 @@ public class Principale extends AppCompatActivity {
     String tempEsponente = "";
     String numeroBase = "";
     String testoPrimaEsponente;
+
+    //Variabli coseno
+    List<Double> listaNumeriCoseno = new ArrayList<Double>();
+    List<Character> listaOperatoriCoseno = new ArrayList<Character>();
+    String daRimuovereCoseno = "cos(";
+    String tempCoseno = "";
+    String numeroCoseno = "";
+    String testoPrimaCoseno;
+
+    //Variabli seno
+    List<Double> listaNumeriSeno = new ArrayList<Double>();
+    List<Character> listaOperatoriSeno = new ArrayList<Character>();
+    String daRimuovereSeno = "sin(";
+    String tempSeno = "";
+    String numeroSeno = "";
+    String testoPrimaSeno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +111,10 @@ public class Principale extends AppCompatActivity {
         pulsantePotenza = (Button) findViewById(R.id.pulsantePotenza);
         pulsanteChiudiRadice = (Button) findViewById(R.id.pulsanteChiudiRadice);
         pulsanteChiudiPotenza = (Button) findViewById(R.id.pulsanteChiudiPotenza);
+        pulsanteCoseno = (Button) findViewById(R.id.pulsanteCoseno);
+        pulsanteSeno = (Button) findViewById(R.id.pulsanteSeno);
+        pulsanteChiudiCoseno = (Button) findViewById(R.id.pulsanteChiudiCoseno);
+        pulsanteChiudiSeno = (Button) findViewById(R.id.pulsanteChiudiSeno);
         pulsanteResettaNumero = (ImageButton) findViewById(R.id.pulsanteResettaNumero);
         espressioneCompleta = (TextView) findViewById(R.id.espressioneCompleta);
         numeroEspressione = (EditText) findViewById(R.id.numeroEspressione);
@@ -213,7 +237,6 @@ public class Principale extends AppCompatActivity {
                         segnoEspressione('-');
 
                     }
-
                 }
             }
         });
@@ -261,6 +284,181 @@ public class Principale extends AppCompatActivity {
             }
         });
 
+        //Pulsante Coseno
+        pulsanteCoseno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Se non sono presenti numeri o sono presenti segni
+                if (!numeroEspressione.getText().toString().isEmpty() &&
+                        !numeroEspressione.getText().toString().endsWith(".") &&
+                        !numeroEspressione.getText().toString().endsWith("+") &&
+                        !numeroEspressione.getText().toString().endsWith("-") &&
+                        !numeroEspressione.getText().toString().endsWith("x") &&
+                        !numeroEspressione.getText().toString().endsWith(":") &&
+                        !numeroEspressione.getText().toString().endsWith("(")) {
+
+                    testoPrimaCoseno = numeroEspressione.getText().toString();
+
+                    tempCoseno = numeroEspressione.getText().toString();
+
+                    while (!tempCoseno.isEmpty() &&
+                            !tempCoseno.toString().endsWith("+") &&
+                            !tempCoseno.toString().endsWith("-") &&
+                            !tempCoseno.toString().endsWith("x") &&
+                            !tempCoseno.toString().endsWith(":") &&
+                            !tempCoseno.toString().endsWith("(")) {
+
+                        numeroCoseno = String.valueOf(tempCoseno.charAt(tempCoseno.length() - 1)) + numeroCoseno.toString();
+
+                        tempCoseno = tempCoseno.substring(0, tempCoseno.length() - 1);
+                    }
+
+                    testoPrimaCoseno = testoPrimaCoseno.replace(numeroCoseno, "");
+
+                    numeroEspressione.setText(numeroEspressione.getText().toString() + "cos(");
+
+                    //Rendo visibile il pulsante per chiudere la potenza
+                    pulsanteChiudiCoseno.setVisibility(View.VISIBLE);
+                    pulsanteCoseno.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        //Pulsante Seno
+        pulsanteSeno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Se non sono presenti numeri o sono presenti segni
+                if (!numeroEspressione.getText().toString().isEmpty() &&
+                        !numeroEspressione.getText().toString().endsWith(".") &&
+                        !numeroEspressione.getText().toString().endsWith("+") &&
+                        !numeroEspressione.getText().toString().endsWith("-") &&
+                        !numeroEspressione.getText().toString().endsWith("x") &&
+                        !numeroEspressione.getText().toString().endsWith(":") &&
+                        !numeroEspressione.getText().toString().endsWith("(")) {
+
+                    testoPrimaSeno = numeroEspressione.getText().toString();
+
+                    tempSeno = numeroEspressione.getText().toString();
+
+                    while (!tempSeno.isEmpty() &&
+                            !tempSeno.toString().endsWith("+") &&
+                            !tempSeno.toString().endsWith("-") &&
+                            !tempSeno.toString().endsWith("x") &&
+                            !tempSeno.toString().endsWith(":") &&
+                            !tempSeno.toString().endsWith("(")) {
+
+                        numeroSeno = String.valueOf(tempSeno.charAt(tempSeno.length() - 1)) + numeroSeno.toString();
+
+                        tempSeno = tempSeno.substring(0, tempSeno.length() - 1);
+                    }
+
+                    testoPrimaSeno = testoPrimaSeno.replace(numeroSeno, "");
+
+                    numeroEspressione.setText(numeroEspressione.getText().toString() + "sin(");
+
+                    //Rendo visibile il pulsante per chiudere la potenza
+                    pulsanteChiudiSeno.setVisibility(View.VISIBLE);
+                    pulsanteSeno.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        //Pulsante ChiudiCoseno
+        pulsanteChiudiCoseno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //E' possibile chiudere l'esponente se non è presente un segno o un punto o una parentesi
+                if (!numeroEspressione.getText().toString().endsWith("+") &&
+                        !numeroEspressione.getText().toString().endsWith("-") &&
+                        !numeroEspressione.getText().toString().endsWith("x") &&
+                        !numeroEspressione.getText().toString().endsWith(":") &&
+                        !numeroEspressione.getText().toString().endsWith("(") &&
+                        !numeroEspressione.getText().toString().endsWith(".")) {
+
+                    //Ottengo il testo inserito
+                    tempCoseno = numeroEspressione.getText().toString();
+
+                    while (tempCoseno.charAt(0) != 'c') {
+                        tempCoseno = tempCoseno.substring(1, tempCoseno.length());
+                    }
+
+                    tempCoseno = tempCoseno.replace(daRimuovereCoseno, "");
+
+                    //Aggiungo il numero
+                    listaNumeriCoseno.add(Double.parseDouble(tempCoseno));
+
+                    if (Double.isInfinite(Double.valueOf(numeroCoseno) * Math.cos(Math.toRadians(risolviEspressione(listaNumeriCoseno, listaOperatoriCoseno))))) {
+                        Toast.makeText(Principale.this, "E' un numero infinito! :(", Toast.LENGTH_LONG).show();
+                        numeroEspressione.setText("");
+                    } else {
+                        numeroEspressione.setText(testoPrimaCoseno + String.valueOf(arrotondaDouble(Double.valueOf(numeroCoseno) * Math.cos(Math.toRadians(risolviEspressione(listaNumeriCoseno, listaOperatoriCoseno))), 8)));
+                    }
+
+                    //Libero le liste
+                    listaNumeriCoseno.clear();
+                    listaOperatoriCoseno.clear();
+                    daRimuovereCoseno = "cos(";
+                    tempCoseno = "";
+                    numeroCoseno = "";
+                    testoPrimaCoseno = "";
+
+                    //Cambio i pulsanti
+                    pulsanteCoseno.setVisibility(View.VISIBLE);
+                    pulsanteChiudiCoseno.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
+        //Pulsante ChiudiSeno
+        pulsanteChiudiSeno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //E' possibile chiudere l'esponente se non è presente un segno o un punto o una parentesi
+                if (!numeroEspressione.getText().toString().endsWith("+") &&
+                        !numeroEspressione.getText().toString().endsWith("-") &&
+                        !numeroEspressione.getText().toString().endsWith("x") &&
+                        !numeroEspressione.getText().toString().endsWith(":") &&
+                        !numeroEspressione.getText().toString().endsWith("(") &&
+                        !numeroEspressione.getText().toString().endsWith(".")) {
+
+                    //Ottengo il testo inserito
+                    tempSeno = numeroEspressione.getText().toString();
+
+                    while (tempSeno.charAt(0) != 's') {
+                        tempSeno = tempSeno.substring(1, tempSeno.length());
+                    }
+
+                    tempSeno = tempSeno.replace(daRimuovereSeno, "");
+
+                    //Aggiungo il numero
+                    listaNumeriSeno.add(Double.parseDouble(tempSeno));
+
+                    if (Double.isInfinite(Double.valueOf(numeroSeno) * Math.sin(Math.toRadians(risolviEspressione(listaNumeriSeno, listaOperatoriSeno))))) {
+                        Toast.makeText(Principale.this, "E' un numero infinito! :(", Toast.LENGTH_LONG).show();
+                        numeroEspressione.setText("");
+                    } else {
+                        numeroEspressione.setText(testoPrimaSeno + String.valueOf(arrotondaDouble(Double.valueOf(numeroSeno) * Math.sin(Math.toRadians(risolviEspressione(listaNumeriSeno, listaOperatoriSeno))), 8)));
+                    }
+
+                    //Libero le liste
+                    listaNumeriSeno.clear();
+                    listaOperatoriSeno.clear();
+                    daRimuovereSeno = "sen(";
+                    tempSeno = "";
+                    numeroSeno = "";
+                    testoPrimaSeno = "";
+
+                    //Cambio i pulsanti
+                    pulsanteSeno.setVisibility(View.VISIBLE);
+                    pulsanteChiudiSeno.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
 
         //Pulsante Cancella
         pulsanteCancella.setOnClickListener(new View.OnClickListener() {
@@ -278,6 +476,12 @@ public class Principale extends AppCompatActivity {
                 pulsantePotenza.setVisibility(View.VISIBLE);
                 pulsanteChiudiPotenza.setVisibility(View.INVISIBLE);
 
+                pulsanteCoseno.setVisibility(View.VISIBLE);
+                pulsanteChiudiCoseno.setVisibility(View.INVISIBLE);
+
+                pulsanteSeno.setVisibility(View.VISIBLE);
+                pulsanteChiudiSeno.setVisibility(View.INVISIBLE);
+
                 //Resetto le liste
                 listaOperatori.clear();
                 listaNumeri.clear();
@@ -285,6 +489,10 @@ public class Principale extends AppCompatActivity {
                 listaOperatoriRadice.clear();
                 listaNumeriEsponente.clear();
                 listaOperatoriEsponente.clear();
+                listaNumeriCoseno.clear();
+                listaOperatoriCoseno.clear();
+                listaNumeriSeno.clear();
+                listaOperatoriSeno.clear();
 
                 //Resetto le variabili
                 daRimuovereRadice = "√(";
@@ -293,6 +501,14 @@ public class Principale extends AppCompatActivity {
                 tempEsponente = "";
                 numeroBase = "";
                 testoPrimaEsponente = "";
+                daRimuovereCoseno = "cos(";
+                tempCoseno = "";
+                numeroCoseno = "";
+                testoPrimaCoseno = "";
+                daRimuovereSeno = "sen(";
+                tempSeno = "";
+                numeroSeno = "";
+                testoPrimaSeno = "";
             }
         });
 
@@ -753,10 +969,21 @@ public class Principale extends AppCompatActivity {
         return Math.rint(d * Math.pow(10, p)) / Math.pow(10, p);
     }
 
+    //Metodo che chiude l'applicazione
     public void esci() {
         //Chiudo l'applicazione
         finish();
         System.exit(0);
+    }
+
+    public double coseno(Double gradi) {
+
+        Double radianti = (gradi * Math.PI) / 180;
+
+        Double cosRadianti = Math.cos(radianti);
+
+        return (cosRadianti * 180) / Math.PI;
+
     }
 
     @Override
@@ -769,10 +996,10 @@ public class Principale extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.actionOne) {
             startActivity(new Intent(getApplicationContext(), Impostazioni.class));
         }
+
         if (id == R.id.actionTwo) {
 
             //Utilizza l'app predefinita per inviare una mail
@@ -782,8 +1009,8 @@ public class Principale extends AppCompatActivity {
             emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "App Android Calcolatrice");
 
             startActivity(Intent.createChooser(emailIntent, "Invia email..."));
-            ;
         }
+
         if (id == R.id.actionThree) {
             esci();
         }

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -72,7 +70,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberFour"
             android:id="@+id/pulsanteQuattro"
             android:textSize="30dp"
@@ -82,7 +80,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberOne"
             android:id="@+id/pulsanteUno"
             android:textSize="30dp"
@@ -92,7 +90,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberThree"
             android:id="@+id/pulsanteTre"
             android:textSize="30sp"
@@ -103,7 +101,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberTwo"
             android:id="@+id/pulsanteDue"
             android:textSize="30sp"
@@ -113,7 +111,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberFive"
             android:id="@+id/pulsanteCinque"
             android:textSize="30dp"
@@ -123,7 +121,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberSeven"
             android:id="@+id/pulsanteSette"
             android:textSize="30dp"
@@ -133,7 +131,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/signPlus"
             android:id="@+id/pulsantePiu"
             android:textSize="30dp"
@@ -145,7 +143,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/signMinus"
             android:id="@+id/pulsanteMeno"
             android:textSize="30dp"
@@ -155,7 +153,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberEight"
             android:id="@+id/pulsanteOtto"
             android:textSize="30dp"
@@ -165,7 +163,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberNine"
             android:id="@+id/pulsanteNove"
             android:textSize="30dp"
@@ -175,7 +173,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberSix"
             android:id="@+id/pulsanteSei"
             android:textSize="30dp"
@@ -185,7 +183,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/signMultiple"
             android:id="@+id/pulsantePer"
             android:textSize="30dp"
@@ -195,7 +193,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/signDivide"
             android:id="@+id/pulsanteDiviso"
             android:textSize="30dp"
@@ -205,7 +203,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/signEquals"
             android:id="@+id/pulsanteUguale"
             android:textSize="30dp"
@@ -215,7 +213,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/numberZero"
             android:id="@+id/pulsanteZero"
             android:textSize="30dp"
@@ -225,7 +223,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="C"
             android:id="@+id/pulsanteCancella"
             android:textSize="30dp"
@@ -235,7 +233,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/signPeriod"
             android:id="@+id/pulsantePunto"
             android:textSize="30dp"
@@ -245,7 +243,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="42dp"
             android:text="@string/squareRoot"
             android:id="@+id/pulsanteRadice"
             android:textSize="30dp"
@@ -257,7 +255,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="42dp"
             android:text="@string/toSquared"
             android:id="@+id/pulsantePotenza"
             android:textSize="30dp"
@@ -267,7 +265,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="@string/buttonExit"
             android:id="@+id/pulsanteEsci"
             android:textSize="20dp"
@@ -277,7 +275,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="42dp"
             android:text="@string/closeToSquared"
             android:id="@+id/pulsanteChiudiPotenza"
             android:textSize="30dp"
@@ -289,7 +287,7 @@
 
         <Button
             android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_height="42dp"
             android:text="@string/closeSquareRoot"
             android:id="@+id/pulsanteChiudiRadice"
             android:textSize="30dp"
@@ -298,6 +296,54 @@
             android:layout_alignTop="@+id/pulsanteRadice"
             android:layout_toRightOf="@+id/pulsanteEsci"
             android:layout_toEndOf="@+id/pulsanteEsci" />
+
+        <Button
+            android:layout_width="82dp"
+            android:layout_height="42dp"
+            android:text="@string/buttonCos"
+            android:id="@+id/pulsanteCoseno"
+            android:enabled="true"
+            android:layout_alignBottom="@+id/pulsanteUguale"
+            android:layout_alignLeft="@+id/pulsanteRadice"
+            android:layout_alignStart="@+id/pulsanteRadice"
+            android:visibility="visible"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="82dp"
+            android:layout_height="42dp"
+            android:text="@string/buttonCloseCos"
+            android:id="@+id/pulsanteChiudiCoseno"
+            android:enabled="true"
+            android:visibility="invisible"
+            android:layout_alignBottom="@+id/pulsanteUguale"
+            android:layout_alignLeft="@+id/pulsanteRadice"
+            android:layout_alignStart="@+id/pulsanteRadice"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="82dp"
+            android:layout_height="42dp"
+            android:text="@string/buttonCloseSin"
+            android:id="@+id/pulsanteChiudiSeno"
+            android:enabled="true"
+            android:visibility="invisible"
+            android:layout_alignBottom="@+id/pulsanteUguale"
+            android:layout_toLeftOf="@+id/pulsanteUguale"
+            android:layout_toStartOf="@+id/pulsanteUguale"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="82dp"
+            android:layout_height="42dp"
+            android:text="@string/buttonSin"
+            android:id="@+id/pulsanteSeno"
+            android:enabled="true"
+            android:visibility="visible"
+            android:layout_alignBottom="@+id/pulsanteUguale"
+            android:layout_toLeftOf="@+id/pulsanteUguale"
+            android:layout_toStartOf="@+id/pulsanteUguale"
+            android:textSize="25dp" />
 
     </RelativeLayout>
  </ScrollView>

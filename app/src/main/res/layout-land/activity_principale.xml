@@ -56,7 +56,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberFour"
                 android:id="@+id/pulsanteQuattro"
@@ -66,7 +66,7 @@
                 android:layout_toEndOf="@+id/pulsanteTre" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberOne"
                 android:id="@+id/pulsanteUno"
@@ -76,7 +76,7 @@
                 android:layout_toEndOf="@+id/pulsanteCinque" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberThree"
                 android:id="@+id/pulsanteTre"
@@ -86,7 +86,7 @@
                 android:layout_alignStart="@+id/pulsanteOtto" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberTwo"
                 android:id="@+id/pulsanteDue"
@@ -96,7 +96,7 @@
                 android:layout_toEndOf="@+id/pulsanteUno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberFive"
                 android:id="@+id/pulsanteCinque"
@@ -106,7 +106,7 @@
                 android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberSeven"
                 android:id="@+id/pulsanteSette"
@@ -116,7 +116,7 @@
                 android:layout_toEndOf="@+id/pulsanteUno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/signPlus"
                 android:id="@+id/pulsantePiu"
@@ -126,7 +126,7 @@
                 android:layout_toEndOf="@+id/pulsanteNove" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/signMinus"
                 android:id="@+id/pulsanteMeno"
@@ -136,7 +136,7 @@
                 android:layout_toEndOf="@+id/pulsantePiu" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberEight"
                 android:id="@+id/pulsanteOtto"
@@ -146,7 +146,7 @@
                 android:layout_toEndOf="@+id/pulsanteDue" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberNine"
                 android:id="@+id/pulsanteNove"
@@ -156,7 +156,7 @@
                 android:layout_alignStart="@+id/pulsanteQuattro" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberSeven"
                 android:id="@+id/pulsanteSei"
@@ -166,7 +166,7 @@
                 android:layout_toStartOf="@+id/pulsanteDue" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/signMultiple"
                 android:id="@+id/pulsantePer"
@@ -176,7 +176,7 @@
                 android:layout_toStartOf="@+id/pulsanteMeno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/signDivide"
                 android:id="@+id/pulsanteDiviso"
@@ -186,7 +186,7 @@
                 android:layout_alignStart="@+id/pulsanteMeno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/signEquals"
                 android:id="@+id/pulsanteUguale"
@@ -196,7 +196,7 @@
                 android:layout_alignParentEnd="true" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/numberZero"
                 android:id="@+id/pulsanteZero"
@@ -206,7 +206,7 @@
                 android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/buttonCancel"
                 android:id="@+id/pulsanteCancella"
@@ -216,7 +216,7 @@
                 android:layout_toEndOf="@+id/pulsanteRadice" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/squareRoot"
                 android:id="@+id/pulsanteRadice"
@@ -228,7 +228,7 @@
                 android:layout_toEndOf="@+id/pulsanteMeno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/toSquared"
                 android:id="@+id/pulsantePotenza"
@@ -238,7 +238,7 @@
                 android:layout_toEndOf="@+id/pulsanteMeno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/buttonExit"
                 android:id="@+id/pulsanteEsci"
@@ -248,7 +248,7 @@
                 android:layout_alignParentEnd="true" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/closeToSquared"
                 android:id="@+id/pulsanteChiudiPotenza"
@@ -260,7 +260,7 @@
                 android:layout_alignStart="@+id/pulsanteRadice" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/closeSquareRoot"
                 android:id="@+id/pulsanteChiudiRadice"
@@ -272,7 +272,7 @@
                 android:layout_toEndOf="@+id/pulsanteMeno" />
 
             <Button
-                android:layout_width="61dp"
+                android:layout_width="55dp"
                 android:layout_height="70dp"
                 android:text="@string/signPeriod"
                 android:id="@+id/pulsantePunto"
@@ -280,6 +280,52 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignLeft="@+id/pulsanteCancella"
                 android:layout_alignStart="@+id/pulsanteCancella" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:text="@string/buttonCos"
+                android:id="@+id/pulsanteCoseno"
+                android:textSize="15sp"
+                android:layout_above="@+id/pulsanteUguale"
+                android:layout_toLeftOf="@+id/pulsanteUguale"
+                android:layout_toStartOf="@+id/pulsanteUguale"
+                android:visibility="visible" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:text="@string/buttonSin"
+                android:id="@+id/pulsanteSeno"
+                android:textSize="15sp"
+                android:enabled="true"
+                android:visibility="visible"
+                android:layout_alignTop="@+id/pulsantePer"
+                android:layout_toLeftOf="@+id/pulsanteUguale"
+                android:layout_toStartOf="@+id/pulsanteUguale" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:text="@string/buttonCloseCos"
+                android:id="@+id/pulsanteChiudiCoseno"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/pulsanteUguale"
+                android:layout_toStartOf="@+id/pulsanteUguale"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:text="@string/buttonCloseSin"
+                android:id="@+id/pulsanteChiudiSeno"
+                android:textSize="15sp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:layout_alignTop="@+id/pulsantePer"
+                android:layout_alignRight="@+id/pulsanteSeno"
+                android:layout_alignEnd="@+id/pulsanteSeno" />
 
         </RelativeLayout>
     </ScrollView>
