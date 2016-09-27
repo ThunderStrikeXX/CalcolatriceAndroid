@@ -1,4 +1,4 @@
 # CalcolatriceAndroid
-Una semplice calcolatrice per smartphone android con funzioni quali radice e esponente.
+A simple calculator for android with negative numbers, floating point numbers, power and square root.
 
-Per modificare l'app utilizzare Android Studio
+I used Android Studio
